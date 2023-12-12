@@ -12,7 +12,7 @@ const Home = () => {
 
         </Flex>
         <p style={{width:'50%'}}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure facere rem aspernatur, nostrum fugiat at! Possimus fugit consequatur officiis ex facere sit saepe. Sed, quisquam sequi quod obcaecati sunt ea.
+            I am a Software Engineering Student
         </p>
         
 
