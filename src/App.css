@@ -43,8 +43,7 @@
   letter-spacing: 0.2rem;
 }
 .ant-menu-item-selected {
-    /* background-color: #B039CC !important; */
-    background-color:  black;
+    background-color: #101314 !important;
   }
 .socials{
   transition: 0.4s;
