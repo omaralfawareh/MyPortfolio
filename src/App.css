@@ -42,3 +42,24 @@
 .label:hover{
   letter-spacing: 0.2rem;
 }
+.ant-menu-item-selected {
+    /* background-color: #B039CC !important; */
+    background-color:  black;
+  }
+.socials{
+  transition: 0.4s;
+}  
+.socials:hover{
+  scale: 1.2;
+}
+    @media screen and (max-width: 600px) {
+      .flex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .flex *{
+        text-align: center;
+      }
+    }

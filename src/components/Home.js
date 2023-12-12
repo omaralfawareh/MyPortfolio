@@ -1,19 +1,25 @@
 import React from 'react'
+import {LinkedinFilled,GithubFilled,InstagramFilled,FacebookFilled} from '@ant-design/icons'
 import {Flex } from 'antd'
 const Home = () => {
   return (
-    <Flex vertical justify='center' align='center' style={{height:'100vh'}}>
-        <Flex gap={'large'} horizontal justify='center' align='center'>
-            <img style={{height:'100px'}} src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="" />
-            <Flex vertical gap={'none'}>
-                <h1 style={{margin:'0'}}> Hello </h1>
-                <h2 style={{}}> My name is Omar Alfawareh </h2>
+    <Flex vertical justify='center' align='center' style={{height:'100vh', color:'white'}}>
+        <Flex className='flex' gap={70} horizontal justify='center' align='center'>
+            <img style={{height:'150px', display:'block', }} src={require("../assets/Icon.png")} alt="" />
+            <Flex className='flex' vertical justify='start' style={{textAlign:'left'}}>
+                <h1 style={{fontSize:'50px',margin:'0px',}}>Omar Alfawareh</h1>
+                <p style={{fontSize:'18px',color:'#BBBBBB',}}>
+                  Software Engineering Student and Web Developer.
+                </p>
+                <Flex horizontal justify='start' gap={'middle'}>
+                    <a className='socials' href='https://www.linkedin.com/in/omaralfawareh/'><LinkedinFilled style={{display:'block', fontSize:'20px', color:'white'}}/></a>
+                    <a className='socials' href='https://github.com/omaralfawareh'><GithubFilled style={{display:'block', fontSize:'20px', color:'white'}}/></a>
+                    <a className='socials' href='https://www.instagram.com/omar_alfawareh/'><InstagramFilled  style={{display:'block', fontSize:'20px',color:'white'}}/></a>
+                    <a className='socials' href='/404'><FacebookFilled  style={{display:'block', fontSize:'20px',color:'white'}}/></a>
+                </Flex>
             </Flex>
-
         </Flex>
-        <p style={{width:'50%'}}>
-            I am a Software Engineering Student
-        </p>
+        
         
 
     </Flex>
