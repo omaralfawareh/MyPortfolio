@@ -4,8 +4,11 @@ A working progress of my personal portfolio website.
 
 ## Available Scripts
 
-Run `npm install`
+## Run `npm install`
+
 -To download all dependencies
-Run `npm start`
+
+## Run `npm start`
+
 -To start the app.
   
