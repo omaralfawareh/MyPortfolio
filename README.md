@@ -1,6 +1,8 @@
-#Portfolio React App
+## Portfolio React App
 
 A working progress of my personal portfolio website.
+
+## Download Node JS 
 
 ## Run `npm install`
 
