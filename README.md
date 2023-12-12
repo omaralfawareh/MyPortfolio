@@ -2,13 +2,13 @@
 
 A working progress of my personal portfolio website.
 
-## Download Node JS 
+##1- Download Node JS 
 
-## Run `npm install`
+##2- Run `npm install`
 
 -To download all dependencies
 
-## Run `npm start`
+##3- Run `npm start`
 
 -To start the app.
   
