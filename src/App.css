@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.label{
+  transition: 0.3s;
+}
+.label:hover{
+  letter-spacing: 0.2rem;
+}
