@@ -3,14 +3,13 @@ import {Menu,Layout,} from 'antd';
 import {HomeOutlined, UserOutlined, SettingOutlined, MailFilled,} from '@ant-design/icons'
 import {Routes, Route, useNavigate} from 'react-router-dom'
 import Home from './components/Home'
-
-const { Sider, Content } = Layout;
+const { Sider, Content,} = Layout;
 function App() {
   const navigate = useNavigate();
   return (
     <div className="App" style={{display:'flex',flexDirection:'row' ,justifyContent:'center', alignContent:'center'}}>
       <Layout>
-        <Sider breakpoint='lg' collapsible collapsedWidth ='0' className='sider' width={390} style={{
+        <Sider breakpoint='lg' collapsible collapsedWidth ='0' width={390} style={{
           height: '100vh',
           backgroundColor:'#101314'
         }}
@@ -32,8 +31,10 @@ function App() {
           </div>
         </Sider>
         <Layout>
-          <Content style={{display:'flex', justifyContent:'center', alignContent:'center' , height:'100vh',backgroundColor:'#36454f'}}>
-            <LoadContent/>
+          <Content className='' style={{display:'flex', justifyContent:'center', alignContent:'center' , height:'100vh',
+          backgroundColor:'#36454f'
+          }}>
+              <LoadContent/>
           </Content>
         </Layout>
       </Layout>
