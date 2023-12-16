@@ -2,16 +2,16 @@ import React from 'react'
 import {LinkedinFilled,GithubFilled,InstagramFilled,FacebookFilled} from '@ant-design/icons'
 import {Flex } from 'antd'
 import { TypeAnimation } from 'react-type-animation';
-// import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
-    // <motion.div
-    //     initial={{ x: -200, opacity: 0 }}
-    //     animate={{ x: 0, opacity: 1 }}
-    //     exit={{ x: 200, opacity: 0 }}
-    //     transition={{ duration: 0.8 }}
-    // > 
+    <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 200, opacity: 0 }}
+        transition={{ duration: 0.8 }}
+    > 
       <Flex vertical justify='center' align='center' style={{height:'100vh', color:'white'}}>
           <Flex className='flex' gap={70} horizontal justify='center' align='center'>
               <img style={{height:'200px', display:'block', }} src={require("../assets/Icon.png")} alt="" />
@@ -43,6 +43,8 @@ const Home = () => {
               </Flex>
           </Flex>
       </Flex>
+    </motion.div>
+
   )
 }
 

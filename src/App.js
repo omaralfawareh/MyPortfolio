@@ -31,7 +31,7 @@ function App() {
             left: 0,
             top: 0,
             bottom: 0,
-            zIndex:'1'
+            zIndex:'1',
            }}
         >
           <div style={{ display:'flex', flexDirection:'row' , alignItems:'center',
@@ -41,8 +41,8 @@ function App() {
             onClick={({key}) => {
                 if(key !== "exit")
                   navigate(key)
-                
-                  toggleSider()
+                if (window.innerWidth < 768 || key === "exit") 
+                  toggleSider();
 
             }}
             items={[
@@ -62,13 +62,16 @@ function App() {
 
            style={{
               display:'flex', 
+              flexDirection:'column',
+              alignItems:'center',
               justifyContent:'center', 
               alignContent:'center' , 
               backgroundColor:'#36454f',
               height:'100%',
               width: collapsed ? '100%' : 'calc(100% - 390px)', // Adjust width based on Sider state
               marginLeft: collapsed ? 0 : 390, // Adjust margin based on Sider state
-              transition: 'width 0.6s, margin-left 0.6s', // Specify transitions for width and margin-left
+              transition: 'width 0.8s, margin-left 0.8s', // Specify transitions for width and margin-left
+              border:'white solid 1px'
           }}>
               <LoadContent/>
           </Content>
