@@ -1,5 +1,7 @@
 import React from 'react'
-import {Flex, Button,Timeline } from 'antd'
+import {Flex,Timeline } from 'antd'
+import {DownloadOutlined} from '@ant-design/icons'
+import Button from '@mui/material/Button';
 import resume from '../assets/Resume.pdf'
 import { motion } from 'framer-motion'
 import SkillCarousel from './SkillCarousel'
@@ -16,22 +18,22 @@ function About() {
                 About me
             </h1>
             <h2 style={{fontSize:'22px'}}>Omar Alfawareh</h2>
-            <span style={{fontSize:'15px', color:'#BBBBBB'} }>Software Engineer</span>
-            <hr width={'100%'}/>
-            <p style={{color:'#BBBBBB', lineHeight:'1.5rem'}}>
+            <p>Software Engineer</p>
+            <hr width={'100%'} style={{backgroundColor:'#101314',height:'2px',border:'none'}}/>
+            <p style={{color:'', lineHeight:'1.5rem'}}>
                 Hi, my name is Omar Alfawareh, and I am a software engineering student with a passion for web development and 2D game design. With a rich background in creating dynamic and user-friendly websites, I have honed my skills in both front-end and back-end technologies.
             </p>
-            <p style={{color:'#BBBBBB', lineHeight:'1.5rem'}}>
+            <p style={{color:'', lineHeight:'1.5rem'}}>
                 My journey in software engineering is driven by an insatiable curiosity to explore new technologies and push the boundaries of digital innovation.
             </p>
-            <hr width={'100%'}/>
+            <hr width={'100%'} style={{backgroundColor:'#101314',height:'2px',border:'none'}}/>
             <ul className='list' style={{ textAlign:'left',listStyleType: 'none',  padding:'0'}}>
                     <li style={{marginBottom:'1rem'}}>
                         <Flex  gap={'large'} align='center' justify='start' style={{fontFamily:'Montserrat'}}>
                             <span style={{width:'30%', fontWeight:'bold',}}>
                                 Birthday :
                             </span>
-                            <span style={{color:'#BBBBBB'}}>
+                            <span style={{color:''}}>
                                 17/04/2002
                             </span>
                         </Flex>
@@ -41,7 +43,7 @@ function About() {
                             <span style={{width:'30%', fontWeight:'bold'}}>
                                 Age :
                             </span>
-                            <span style={{color:'#BBBBBB'}}>
+                            <span style={{color:''}}>
                                 21
                             </span>
                         </Flex>
@@ -51,7 +53,7 @@ function About() {
                             <span style={{width:'30%', fontWeight:'bold'}}>
                                 Address :
                             </span>
-                            <span style={{color:'#BBBBBB'}}>
+                            <span style={{color:''}}>
                                 Amman, Jordan
                             </span>
                         </Flex>
@@ -62,7 +64,7 @@ function About() {
                                 Email :
                             </span>
                             <span>
-                                <a href="mailto:alfawareho@gmail.com" style={{color:'#BBBBBB'}}>alfawareho@gmail.com</a>
+                                <a href="mailto:alfawareho@gmail.com" style={{color:'white'}}>alfawareho@gmail.com</a>
                             </span>
                         </Flex>
                     </li>
@@ -72,38 +74,30 @@ function About() {
                                 Phone :
                             </span>
                             <span>
-                                <a href="tel:+962791141046" style={{color:'#BBBBBB'}} >+962791141046</a>
+                                <a href="tel:+962791141046" style={{color:'white'}} >+962791141046</a>
                             </span>
                         </Flex>
                     </li>
             </ul>
-            <Button href={resume} download={'Resume'} className='button'>Download CV</Button>
+            <Button startIcon={<DownloadOutlined /> } variant="contained" href={resume} download={'Resume'} className='button' style={{color:'white',backgroundColor:'#101314',fontFamily:'Montserrat'}}>Download CV</Button>
             <h2 style={{fontSize:'22px'}}>Skills</h2>
-            <hr width={'100%'} color='#101314'/>
-             <SkillCarousel/>
-            <hr width={'100%'} color='#101314'/>
+            <hr width={'100%'} style={{backgroundColor:'#101314',height:'2px',border:'none'}}/>
+            <SkillCarousel/>
+            <hr width={'100%'} style={{backgroundColor:'#101314',height:'2px',border:'none'}}/>
                 <Flex  justify='space-around'>
                 </Flex>
-            <Flex  justify='space-around' >
+            <Flex  justify='space-between' style={{width:'80%'}}>
                 <Flex vertical>
                     <h3 style={{fontSize:'20px'}}>Education</h3>
-                    <Timeline style={{fontFamily:'Montserrat', marginTop:'2rem',color:'#BBBBBB'}}
+                    <Timeline style={{fontFamily:'Montserrat', marginTop:'2rem',color:'white'}}
                     items={
                         [
                     {
-                        children: 'Create a services site 2015-09-01',
+                        children: <Flex vertical style={{fontFamily:'Montserrat'}}><p>Princess Sumaya University for Technology</p> <span style={{marginLeft:'1rem'}}>Software Engineering</span></Flex>,
                         color: 'black'
                     },
                     {
-                        children: 'Solve initial network problems 2015-09-01',
-                        color: 'black'
-                    },
-                    {
-                        children: 'Technical testing 2015-09-01',
-                        color: 'black'
-                    },
-                    {
-                        children: 'Network problems being solved 2015-09-01',
+                        children: <Flex vertical style={{fontFamily:'Montserrat'}}><p>Al-Ittihad International Schools</p> <span style={{marginLeft:'1rem'}}>Student</span></Flex>,
                         color: 'black'
                     },
                     ]}
@@ -111,24 +105,17 @@ function About() {
                 </Flex>
                 <Flex vertical>
                     <h3 style={{fontSize:'20px'}}>Experience</h3>
-                    <Timeline style={{color:'#BBBBBB', fontFamily:'Montserrat',marginTop:'2rem'}}
+                    <Timeline style={{color:'white', fontFamily:'Montserrat',marginTop:'2rem'}}
                         items={[
                         {
-                            children: 'Create a services site 2015-09-01',
+                            children: <Flex vertical style={{fontFamily:'Montserrat'}}><p>Eduhax</p> <span style={{marginLeft:'1rem'}}>Web Developer Intern</span></Flex>,
                             color: 'black'
                         },
                         {
-                            children: 'Solve initial network problems 2015-09-01',
+                            children: <Flex vertical style={{fontFamily:'Montserrat'}}><p>Orange Jordan</p> <span style={{marginLeft:'1rem'}}>Full-Stack Developer Intern</span></Flex>,
                             color: 'black'
                         },
-                        {
-                            children: 'Technical testing 2015-09-01',
-                            color: 'black'
-                        },
-                        {
-                            children: 'Network problems being solved 2015-09-01',
-                            color: 'black'
-                        },
+                        
                         ]}
                     />
                 </Flex>

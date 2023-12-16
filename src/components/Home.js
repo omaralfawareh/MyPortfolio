@@ -14,7 +14,7 @@ const Home = () => {
     > 
       <Flex vertical justify='center' align='center' style={{height:'100vh', color:'white'}}>
           <Flex className='flex' gap={70} horizontal justify='center' align='center'>
-              <img style={{height:'200px', display:'block', }} src={require("../assets/Icon.png")} alt="" />
+              <img style={{height:'200px', display:'block', }} src={require("../assets/Icon.png")} alt="Profile PFP" />
               <Flex className='flex' vertical justify='start' style={{textAlign:'left'}}>
                   <h1 style={{fontSize:'50px',margin:'0px',fontFamily:'Montserrat'}}>Omar Alfawareh</h1>
                   <TypeAnimation

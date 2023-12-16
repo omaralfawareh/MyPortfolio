@@ -5,7 +5,7 @@ import {HomeOutlined, UserOutlined, SettingOutlined, MailFilled,LeftOutlined} fr
 import {Routes, Route, useNavigate} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
-
+import Error from './components/Error'
 const { Sider, Content,} = Layout;
 function App() {
   const [collapsed, setCollapsed] = useState(false);
@@ -68,10 +68,9 @@ function App() {
               alignContent:'center' , 
               backgroundColor:'#36454f',
               height:'100%',
-              width: collapsed ? '100%' : 'calc(100% - 390px)', // Adjust width based on Sider state
-              marginLeft: collapsed ? 0 : 390, // Adjust margin based on Sider state
-              transition: 'width 0.8s, margin-left 0.8s', // Specify transitions for width and margin-left
-              border:'white solid 1px'
+              width: collapsed ? '100%' : 'calc(100% - 390px)', //To Adjust the width based on Sider state
+              marginLeft: collapsed ? 0 : 390, //To Adjust margin based on Sider state
+              transition: 'width 0.8s, margin-left 0.8s', //To Specify transitions for width and margin-left
           }}>
               <LoadContent/>
           </Content>
@@ -88,7 +87,7 @@ function LoadContent(){
       <Route path='/about' element={<About/>}></Route>
       <Route path='/projects' element={<div>Projects</div>}></Route>
       <Route path='/contact' element={<div>Contact</div>}></Route>
-      <Route path='/*' element={<div><h1>ERROR 404</h1></div>}></Route>
+      <Route path='/*' element={<Error/>}></Route>
     </Routes>
   </div>
 }
