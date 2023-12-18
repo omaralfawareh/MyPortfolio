@@ -23,7 +23,7 @@ function App() {
           onCollapse={toggleSider}
           collapsed={collapsed}
           collapsedWidth ='0' 
-          width={390} 
+          width={window.innerWidth < 768 ?  '100vw':   390} 
           style={{
             height: '100%',
             backgroundColor:'#101314',
@@ -70,7 +70,7 @@ function App() {
               height:'100%',
               width: collapsed ? '100%' : 'calc(100% - 390px)', //To Adjust the width based on Sider state
               marginLeft: collapsed ? 0 : 390, //To Adjust margin based on Sider state
-              transition: 'width 0.8s, margin-left 0.8s', //To Specify transitions for width and margin-left
+              transition: window.innerWidth >= 768 ? 'width 0.8s, margin-left 0.8s':'', //To Specify transitions for width and margin-left but non on mobile
           }}>
               <LoadContent/>
           </Content>

@@ -72,7 +72,7 @@ p{
       overflow-x: hidden !important;
       /* Hide horizontal overflow on small screens */
     }
-  .ant-layout-sider {
+  .ant-layout-sider .sider{
       width: 100% !important;
     }
   .flex{

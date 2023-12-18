@@ -30,7 +30,7 @@ const SkillCarousel = () => {
                 ]}
                 autoCycle={true}
                 cycleInterval={2000}
-                animationDuration={1500}
+                animationDuration={1800}
                 arrows={false}
                 dots={false}
                 showSides={false}
