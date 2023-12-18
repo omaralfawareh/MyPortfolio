@@ -1,6 +1,6 @@
 ## Portfolio React App
 
-A working progress of my personal portfolio website.
+A working progress of my personal portfolio website made in React JS.
 
 ##1- Download Node JS 
 
