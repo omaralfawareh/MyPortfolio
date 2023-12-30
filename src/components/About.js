@@ -27,19 +27,19 @@ function About() {
                     My journey in software engineering is driven by an insatiable curiosity to explore new technologies and push the boundaries of digital innovation.
                 </p>
                 <hr width={'100%'} style={{ backgroundColor: '#101314', height: '2px', border: 'none' }} />
-                <ul className='list' style={{ textAlign: 'left', listStyleType: 'none', padding: '0' }}>
+                <ul className='list' style={{ textAlign: 'left', listStyleType: 'none', padding: '0' , }}>
                     <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat' }}>
+                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat', fontSize:'16px' }}>
                             <span style={{ width: '30%', fontWeight: 'bold', }}>
                                 Birthday :
                             </span>
-                            <span style={{ color: '' }}>
+                            <span style={{  }}>
                                 17/04/2002
                             </span>
                         </Flex>
                     </li>
                     <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat' }}>
+                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
                             <span style={{ width: '30%', fontWeight: 'bold' }}>
                                 Age :
                             </span>
@@ -49,7 +49,7 @@ function About() {
                         </Flex>
                     </li>
                     <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat' }}>
+                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
                             <span style={{ width: '30%', fontWeight: 'bold' }}>
                                 Address :
                             </span>
@@ -59,7 +59,7 @@ function About() {
                         </Flex>
                     </li>
                     <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat' }}>
+                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
                             <span style={{ width: '30%', fontWeight: 'bold' }}>
                                 Email :
                             </span>
@@ -69,7 +69,7 @@ function About() {
                         </Flex>
                     </li>
                     <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat' }}>
+                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
                             <span style={{ width: '30%', fontWeight: 'bold' }}>
                                 Phone :
                             </span>
@@ -79,7 +79,7 @@ function About() {
                         </Flex>
                     </li>
                 </ul>
-                <Button startIcon={<DownloadOutlined />} variant="contained" href={resume} download={'Resume'} className='button' style={{ color: 'white', backgroundColor: '#101314', fontFamily: 'Montserrat' }}>Download CV</Button>
+                <Button startIcon={<DownloadOutlined />} variant="contained" href={resume} download={'Resume'} className='button' style={{ color: 'white', backgroundColor: '#101314', fontFamily: 'Montserrat' }}><span style={{fontWeight:'bold'}}>Download CV</span></Button>
                 <h2 style={{ fontSize: '22px' }}>Skills</h2>
                 <hr width={'100%'} style={{ backgroundColor: '#101314', height: '2px', border: 'none' }} />
                 <SkillCarousel />
