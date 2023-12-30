@@ -5,6 +5,8 @@ import {HomeOutlined, UserOutlined, SettingOutlined, MailFilled,LeftOutlined} fr
 import {Routes, Route, useNavigate} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
+import Contact from './components/Contact'
+
 import Error from './components/Error'
 const { Sider, Content,} = Layout;
 function App() {
@@ -71,6 +73,7 @@ function App() {
               width: collapsed ? '100%' : 'calc(100% - 390px)', //To Adjust the width based on Sider state
               marginLeft: collapsed ? 0 : 390, //To Adjust margin based on Sider state
               transition: window.innerWidth >= 768 ? 'width 0.8s, margin-left 0.8s':'', //To Specify transitions for width and margin-left but non on mobile
+              // border:'white solid 1px'
           }}>
               <LoadContent/>
           </Content>
@@ -86,7 +89,7 @@ function LoadContent(){
       <Route path='/' element={<Home/>} ></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/projects' element={<div>Projects</div>}></Route>
-      <Route path='/contact' element={<div>Contact</div>}></Route>
+      <Route path='/contact' element={<Contact/>}></Route>
       <Route path='/*' element={<Error/>}></Route>
     </Routes>
   </div>
