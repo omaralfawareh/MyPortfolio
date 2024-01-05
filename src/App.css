@@ -93,8 +93,10 @@ hr{
   font-weight: bold;
   color: white;
   background-color: black;
+  transition: 0.4s;
 }
 .about .button:hover{
+  letter-spacing: 3px;
   background-color: #101314;
 }
 .list{
