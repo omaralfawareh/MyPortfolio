@@ -6,6 +6,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Project from './components/Project'
 
 import Error from './components/Error'
 const { Sider, Content,} = Layout;
@@ -89,7 +90,7 @@ function LoadContent(){
     <Routes>
       <Route path='/' element={<Home/>} ></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='/projects' element={<div>Projects</div>}></Route>
+      <Route path='/projects' element={<Project/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>
       <Route path='/*' element={<Error/>}></Route>
     </Routes>
