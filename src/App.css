@@ -79,6 +79,7 @@ hr{
   font-size: 20px;
   color: white;
 }
+/* Home page style End */
 /* About page style Start */
 .about{
   width: 50vw;
@@ -175,6 +176,15 @@ hr{
   background-color: #101314;
 }
 /* Contact Component Style END*/
+/* Project Component Style Start */
+.projects{
+  width: 50vw;
+  height: 100vh;
+  padding: 1rem;
+  font-family: MontSerrat;
+  color: white;
+}
+/* Project Component Style End */
 @media screen and (max-width: 900px) {
   .container {
       overflow-x: hidden !important;
@@ -196,7 +206,7 @@ hr{
   .label{
     text-align: left;
   }
-  .about {
+  .about , .projects{
     width: 100vw;
     height: 100vh;
   }

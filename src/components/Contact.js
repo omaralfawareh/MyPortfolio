@@ -12,7 +12,39 @@ function Contact (){
   const form = useRef();
   const [open, setOpen] = React.useState(false);
   const [sent, setSent] = React.useState(false);
+  const [valid, setValid] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
 
+  function validate(callback) {
+  if (email === "" || name === "" || message === "") {
+    setValid(false);
+    console.log('Validation failed: Empty fields');
+    callback(false);
+  } else {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (email.match(validRegex)) {
+      setValid(true);
+      console.log('Validation passed');
+      callback(true);
+    } else {
+      setValid(false);
+      console.log('Validation failed: Invalid email format');
+      callback(false);
+    }
+  }
+}
+
+  function handleName (e) {
+    setName(e.target.value)
+  }
+  function handleEmail (e) {
+    setEmail(e.target.value)
+  }
+  function handleMessage (e) {
+    setMessage(e.target.value)
+  }
   function handleClick() {
     setOpen(true);
   };
@@ -36,18 +68,29 @@ function Contact (){
     </React.Fragment>
   );
   const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_2rq4fhi ', 'template_mfctzvy', form.current, 'ecOwUU7qwwkr2wMe-')
-      .then((result) => {
-        setSent(true);
-        handleClick()
-      }, (error) => {
-          console.log(error.text);
-          setSent(false);
-          handleClick();
-      });
-  };
+  e.preventDefault();
+  validate((isValid) => {
+    console.log(isValid);
+    if (isValid) {
+      emailjs
+        .sendForm('service_2rq4fhi', 'template_mfctzvy', form.current, 'ecOwUU7qwwkr2wMe-')
+        .then(
+          (result) => {
+            setSent(true);
+            handleClick();
+          },
+          (error) => {
+            console.log(error.text);
+            setSent(false);
+            handleClick();
+          }
+        );
+    } else {
+      setValid(false);
+      handleClick();
+    }
+  });
+};
   return (
     <motion.div
             initial={{ x: -200, opacity: 0 }}
@@ -58,16 +101,16 @@ function Contact (){
     <form className='contact' ref={form} >
         <Flex className='content' align='left' gap={'large'} vertical>
             <h1>Get In Touch</h1>
-            <TextField className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_name' id="outlined-basic" label="Name" variant="outlined" />
-            <TextField className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_email' id="outlined-basic" label="Email" variant="outlined" />
-            <TextField className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='message' id="outlined-basic"  rows={4} multiline label="Message" variant="outlined"/>
+            <TextField sx={{ input: { color: 'white' } }} onChange={handleName} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_name' id="outlined-basic" label="Name" variant="outlined" />
+            <TextField  sx={{ input: { color: 'white' } }} onChange={handleEmail} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_email' id="outlined-basic" label="Email" variant="outlined" />
+            <TextField sx={{ input: { color: 'white' } }} onChange={handleMessage} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='message' id="outlined-basic"  rows={4} multiline label="Message" variant="outlined"/>
             <Button variant="contained" onClick={sendEmail}  className='button'>
               <span>Send Message</span>
             </Button>
             
         </Flex>
       </form>
-      {sent && <Snackbar
+      {sent && valid && <Snackbar
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
@@ -75,11 +118,18 @@ function Contact (){
         action={action}
       />
       }
-      {!sent && <Snackbar
+      {!sent && valid && <Snackbar
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
         message="Failed to Send"
+        action={action}
+      />}
+      {!valid && <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message="Improper Inputs"
         action={action}
       />}
      </motion.div>   
