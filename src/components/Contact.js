@@ -54,16 +54,15 @@ function Contact (){
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 200, opacity: 0 }}
             transition={{ duration: 0.8 }}
-            style={{ border:'red solid 1px'}}
     >   
-    <form ref={form} >
-        <Flex className='about' align='left' gap={'large'} vertical style={{ border:'white solid 1px' , height:'100vh', padding:'1rem'}}>
-            <h1 style={{textAlign:'left'}}>Get In Touch</h1>
-            <TextField InputLabelProps={{ style: { color: '#fff' }, }} name='user_name' id="outlined-basic" label="Name" variant="outlined" style={{width:'100%'}}/>
-            <TextField InputLabelProps={{ style: { color: '#fff' }, }} name='user_email' id="outlined-basic" label="Email" variant="outlined" style={{width:'100%'}}/>
-            <TextField InputLabelProps={{ style: { color: '#fff' }, }} name='message' id="outlined-basic"  rows={4} multiline label="Message" variant="outlined" style={{width:'100%'}}/>
-            <Button variant="contained" onClick={sendEmail}  className='button' style={{ color: 'white', backgroundColor: '#101314', fontFamily: 'Montserrat' }}>
-              <span style={{fontWeight:'bold'}}>Send Message</span>
+    <form className='contact' ref={form} >
+        <Flex className='content' align='left' gap={'large'} vertical>
+            <h1>Get In Touch</h1>
+            <TextField className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_name' id="outlined-basic" label="Name" variant="outlined" />
+            <TextField className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_email' id="outlined-basic" label="Email" variant="outlined" />
+            <TextField className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='message' id="outlined-basic"  rows={4} multiline label="Message" variant="outlined"/>
+            <Button variant="contained" onClick={sendEmail}  className='button'>
+              <span>Send Message</span>
             </Button>
             
         </Flex>

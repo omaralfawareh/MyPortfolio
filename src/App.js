@@ -28,7 +28,8 @@ function App() {
           width={window.innerWidth < 768 ?  '100vw':   390} 
           style={{
             height: '100%',
-            backgroundColor:'#101314',
+            // backgroundColor:'#101314',
+            backgroundColor:'black',
             position: 'fixed',
             left: 0,
             top: 0,
@@ -38,7 +39,7 @@ function App() {
         >
           <div style={{ display:'flex', flexDirection:'row' , alignItems:'center',
                 justifyContent:'center', height:'100vh'}}>
-            <Menu theme="dark" mode="inline" style={{textAlign:'left',backgroundColor:'#101314', padding:'1rem',width:'50%',}} 
+            <Menu className='menu' theme="dark" mode="inline" style={{textAlign:'left',backgroundColor:'black', padding:'1rem',width:'50%',}} 
             
             onClick={({key}) => {
                 if(key !== "exit")

@@ -27,53 +27,160 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.label{
+.menu .label{
   transition: 0.3s;
 }
-.label:hover{
+.menu .label:hover{
   letter-spacing: 0.2rem;
 }
 .ant-menu-item-selected {
     background-color: #101314 !important;
   }
-.socials{
+p {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+hr{
+  width: 100%;
+  background-color: black;
+  height: 2px;
+  border: none;
+}
+/* Home page style Start */
+.home{
+  height: 100vh;
+  color: white;
+  text-align: left;
+}
+.home .flex{
+  font-family: Montserrat;
+}
+.home .flex h1{
+  font-size: 60px;
+  margin: 0px;
+}
+.home .flex p{
+  font-size: 16px;
+  color: #bbb;
+  width: 90%;
+}
+.home .flex .animation{
+  display: inline-block;
+  font-size: 24px;
+}
+.socials {
   transition: 0.4s;
-}  
-.socials:hover{
+}
+.socials:hover {
   scale: 1.2;
 }
+.socials .icons{
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+/* About page style Start */
 .about{
   width: 50vw;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  height: 100%;
+  font-family: MontSerrat;
+}
+.about .button {
+  width: 25%;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+}
+.about .button:hover{
+  background-color: #101314;
 }
 .list{
   width: 50%;
+  list-style-type: none;
+  padding: 0;
+  
 }
-.button{
-  width: 25%;
-}
-p{
+.list li{
+  margin-bottom: 1rem;
   font-size: 16px;
 }
-@media screen and (max-width: 600px) {
-  /* body {
-      overflow-x: hidden;
-      overflow-y: hidden;
-    } */
+.listFlex{
+  font-family: Montserrat;
+  font-size: 16px;
+}
+.listFlex span{
+  width: 30%;
+}
+.listFlex a{
+  color: white;
+}
+.about h1{
+  font-size: 30px;
+}
+.about h2 {
+  font-size: 22px;
+}
+.about h3{
+  font-size: 20px;
+}
+.timelineContainer{
+  width: 80%;
+}
+.timeline{
+  font-family: Montserrat;
+  margin-top: 2rem;
+  color: white;
+  
+}
+.timeline *{
+  font-family: Montserrat;
+}
+.timeline span{
+  margin-left: 2rem;
+}
+/* About page style End */
+/* Contact Component Style */
+.contact {
+  font-family: Montserrat;
+  color: white;
+  width: 50vw;
+}
+.contact .content{
+  height: 100vh; 
+  padding: 1rem;
+}
+.content h1{
+  text-align: left;
+}
+.contact #outlined-basic{
+  width: 100%;
+}
+.contact .input{
+  font-style: italic;
+}
+.contact .button{
+  width: 25%;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.contact .button:hover{
+  letter-spacing: 3px;
+  background-color: #101314;
+}
+/* Contact Component Style END*/
+@media screen and (max-width: 900px) {
   .container {
       overflow-x: hidden !important;
       /* Hide horizontal overflow on small screens */
     }
   .ant-layout-sider .sider{
       width: 100% !important;
+      /* Make sider take full width on small screens */
     }
   .flex{
     flex-direction: column;
@@ -81,25 +188,38 @@ p{
     justify-content: center;
     text-align: center;
   }
-  .flex *{
+  * {
     text-align: center;
   }
-  p{
-    text-align: center;
+  .label{
+    text-align: left;
   }
   .about {
     width: 100vw;
     height: 100vh;
   }
+  .about .timelineContainer{
+    width: 100%;
+  }
+  .listFlex span{
+    text-align: left;
+  }
+  .about .timeline span {
+    text-align: left;
+    margin-left: 0;
+  }
   .list{
     width: 100%;
   }
+  .contact {
+    width: 100vw;
+  }
   
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
   .button {
-    width: 100%;
-  }
+      width: 100% !important;
+    }
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -107,7 +227,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #101314 inset !important;
 }
-/* Text Autofill color */
+/* Text Autofill color in Contact*/
 input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
 }

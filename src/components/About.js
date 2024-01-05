@@ -13,106 +13,106 @@ function About() {
             exit={{ x: 200, opacity: 0 }}
             transition={{ duration: 0.8 }}
         >
-            <Flex className='about' vertical align='left' style={{ border: 'red', fontFamily: 'MontSerrat', color: 'white', textAlign: 'left', padding: '1rem', height: '100%', }}>
-                <h1 style={{ fontSize: '30px' }}>
+            <Flex className='about' vertical align='left'>
+                <h1 className='label' >
                     About me
                 </h1>
-                <h2 style={{ fontSize: '22px' }}>Omar Alfawareh</h2>
-                <p>Software Engineer</p>
-                <hr width={'100%'} style={{ backgroundColor: '#101314', height: '2px', border: 'none' }} />
-                <p style={{ color: '', lineHeight: '1.5rem' }}>
+                <h2 >Omar Alfawareh</h2>
+                <p >Software Engineer</p>
+                <hr/>
+                <p>
                     Hi, my name is Omar Alfawareh, and I am a software engineering student with a passion for web development and 2D game design. With a rich background in creating dynamic and user-friendly websites, I have honed my skills in both front-end and back-end technologies.
                 </p>
-                <p style={{ color: '', lineHeight: '1.5rem' }}>
+                <p>
                     My journey in software engineering is driven by an insatiable curiosity to explore new technologies and push the boundaries of digital innovation.
                 </p>
-                <hr width={'100%'} style={{ backgroundColor: '#101314', height: '2px', border: 'none' }} />
-                <ul className='list' style={{ textAlign: 'left', listStyleType: 'none', padding: '0' , }}>
-                    <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat', fontSize:'16px' }}>
-                            <span style={{ width: '30%', fontWeight: 'bold', }}>
+                <hr/>
+                <ul className='list' >
+                    <li>
+                        <Flex className='listFlex' gap={'large'} align='center' justify='start'>
+                            <span className='label' >
                                 Birthday :
                             </span>
-                            <span style={{  }}>
+                            <span>
                                 17/04/2002
                             </span>
                         </Flex>
                     </li>
-                    <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
-                            <span style={{ width: '30%', fontWeight: 'bold' }}>
+                    <li>
+                        <Flex className='listFlex' gap={'large'} align='center' justify='start' >
+                            <span className='label' >
                                 Age :
                             </span>
-                            <span style={{ color: '' }}>
+                            <span >
                                 21
                             </span>
                         </Flex>
                     </li>
-                    <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
-                            <span style={{ width: '30%', fontWeight: 'bold' }}>
+                    <li>
+                        <Flex className='listFlex' gap={'large'} align='center' justify='start'>
+                            <span className='label'>
                                 Address :
                             </span>
-                            <span style={{ color: '' }}>
+                            <span >
                                 Amman, Jordan
                             </span>
                         </Flex>
                     </li>
-                    <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
-                            <span style={{ width: '30%', fontWeight: 'bold' }}>
+                    <li>
+                        <Flex className='listFlex' gap={'large'} align='center' justify='start' >
+                            <span className='label' >
                                 Email :
                             </span>
                             <span>
-                                <a href="mailto:alfawareho@gmail.com" style={{ color: 'white' }}>alfawareho@gmail.com</a>
+                                <a href="mailto:alfawareho@gmail.com">alfawareho@gmail.com</a>
                             </span>
                         </Flex>
                     </li>
-                    <li style={{ marginBottom: '1rem' }}>
-                        <Flex gap={'large'} align='center' justify='start' style={{ fontFamily: 'Montserrat',fontSize:'16px' }}>
-                            <span style={{ width: '30%', fontWeight: 'bold' }}>
+                    <li>
+                        <Flex className='listFlex' gap={'large'} align='center' justify='start' >
+                            <span className='label'>
                                 Phone :
                             </span>
                             <span>
-                                <a href="tel:+962791141046" style={{ color: 'white' }} >+962791141046</a>
+                                <a href="tel:+962791141046" >+962791141046</a>
                             </span>
                         </Flex>
                     </li>
                 </ul>
-                <Button startIcon={<DownloadOutlined />} variant="contained" href={resume} download={'Resume'} className='button' style={{ color: 'white', backgroundColor: '#101314', fontFamily: 'Montserrat' }}><span style={{fontWeight:'bold'}}>Download CV</span></Button>
-                <h2 style={{ fontSize: '22px' }}>Skills</h2>
-                <hr width={'100%'} style={{ backgroundColor: '#101314', height: '2px', border: 'none' }} />
+                <Button startIcon={<DownloadOutlined />} variant="contained" href={resume} download={'Resume'} className='button'><span>Download CV</span></Button>
+                <h2>Skills</h2>
+                <hr/>
                 <SkillCarousel />
-                <hr width={'100%'} style={{ backgroundColor: '#101314', height: '2px', border: 'none' }} />
+                <hr/>
                 <Flex justify='space-around'>
                 </Flex>
-                <Flex justify='space-between' style={{ width: '80%' }}>
+                <Flex className='timelineContainer' justify='space-between' >
                     <Flex vertical>
-                        <h3 style={{ fontSize: '20px' }}>Education</h3>
-                        <Timeline style={{ fontFamily: 'Montserrat', marginTop: '2rem', color: 'white' }}
+                        <h3 className='label'>Education</h3>
+                        <Timeline className='timeline'
                             items={
                                 [
                                     {
-                                        children: <Flex vertical style={{ fontFamily: 'Montserrat' }}><p>Princess Sumaya University for Technology</p> <span style={{ marginLeft: '1rem' }}>Software Engineering</span></Flex>,
+                                        children: <Flex vertical ><p className='label'>Princess Sumaya University for Technology</p> <span >Software Engineering</span></Flex>,
                                         color: 'black'
                                     },
                                     {
-                                        children: <Flex vertical style={{ fontFamily: 'Montserrat' }}><p>Al-Ittihad International Schools</p> <span style={{ marginLeft: '1rem' }}>Student</span></Flex>,
+                                        children: <Flex vertical ><p className='label'>Al-Ittihad International Schools</p> <span >Student</span></Flex>,
                                         color: 'black'
                                     },
                                 ]}
                         />
                     </Flex>
                     <Flex vertical>
-                        <h3 style={{ fontSize: '20px' }}>Experience</h3>
-                        <Timeline style={{ color: 'white', fontFamily: 'Montserrat', marginTop: '2rem' }}
+                        <h3 className='label'>Experience</h3>
+                        <Timeline className='timeline'
                             items={[
                                 {
-                                    children: <Flex vertical style={{ fontFamily: 'Montserrat' }}><p>Eduhax</p> <span style={{ marginLeft: '1rem' }}>Web Developer Intern</span></Flex>,
+                                    children: <Flex vertical><p className='label'>Eduhax</p> <span >Web Developer Intern</span></Flex>,
                                     color: 'black'
                                 },
                                 {
-                                    children: <Flex vertical style={{ fontFamily: 'Montserrat' }}><p>Orange Jordan</p> <span style={{ marginLeft: '1rem' }}>Full-Stack Developer Intern</span></Flex>,
+                                    children: <Flex vertical><p className='label'>Orange Jordan</p> <span >Full-Stack Developer Intern</span></Flex>,
                                     color: 'black'
                                 },
 

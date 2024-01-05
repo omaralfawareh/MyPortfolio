@@ -12,33 +12,34 @@ const Home = () => {
         exit={{ x: 200, opacity: 0 }}
         transition={{ duration: 0.8 }}
     > 
-      <Flex vertical justify='center' align='center' style={{height:'100vh', color:'white'}}>
+      <Flex className='home' vertical justify='center' align='center'>
           <Flex className='flex' gap={70} horizontal justify='center' align='center'>
-              <img style={{height:'200px', display:'block', }} src={require("../assets/Icon.png")} alt="Profile PFP" />
-              <Flex className='flex' vertical justify='start' style={{textAlign:'left'}}>
-                  <h1 style={{fontSize:'50px',margin:'0px',fontFamily:'Montserrat'}}>Omar Alfawareh</h1>
+              <Flex className='flex' vertical justify='start' >
+                  <h1>Omar Alfawareh</h1>
                   <TypeAnimation
+                  className='animation'
                       sequence={[
                         'Software Engineer',
                         1000, 
                         'Web Developer',
                         1000,
                         'Mobile Developer',
-                        1000
+                        1000,
+                        'Full-Stack Developer',
+                        1000,
                       ]}
                       wrapper="span"
                       speed={50}
-                      style={{ fontSize: '24px', display: 'inline-block', fontFamily:'Montserrat' }}
                       repeat={Infinity}
                     />
-                    <p style={{fontSize:'16px',color:'#BBBBBB', fontFamily:'Montserrat', width:'90%',}}>
+                    <p>
                     Hardworking software engineering student and web developer.
                   </p>
                   <Flex horizontal justify='start' gap={'middle'}>
-                      <a className='socials' href='https://www.linkedin.com/in/omaralfawareh/'><LinkedinFilled style={{display:'block', fontSize:'20px', color:'white'}}/></a>
-                      <a className='socials' href='https://github.com/omaralfawareh'><GithubFilled style={{display:'block', fontSize:'20px', color:'white'}}/></a>
-                      <a className='socials' href='https://www.instagram.com/omar_alfawareh/'><InstagramFilled  style={{display:'block', fontSize:'20px',color:'white'}}/></a>
-                      <a className='socials' href='/404'><FacebookFilled  style={{display:'block', fontSize:'20px',color:'white'}}/></a>
+                      <a className='socials' href='https://www.linkedin.com/in/omaralfawareh/'><LinkedinFilled className='icons' /></a>
+                      <a className='socials' href='https://github.com/omaralfawareh'><GithubFilled className='icons' /></a>
+                      <a className='socials' href='https://www.instagram.com/omar_alfawareh/'><InstagramFilled className='icons' /></a>
+                      <a className='socials' href='/404'><FacebookFilled  className='icons' /></a>
                   </Flex>
               </Flex>
           </Flex>
