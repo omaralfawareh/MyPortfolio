@@ -103,7 +103,7 @@ function Contact (){
             <h1>Get In Touch</h1>
             <TextField sx={{ input: { color: 'white' } }} onChange={handleName} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_name' id="outlined-basic" label="Name" variant="outlined" />
             <TextField  sx={{ input: { color: 'white' } }} onChange={handleEmail} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='user_email' id="outlined-basic" label="Email" variant="outlined" />
-            <TextField sx={{ input: { color: 'white' } }} onChange={handleMessage} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='message' id="outlined-basic"  rows={4} multiline label="Message" variant="outlined"/>
+            <TextField  sx={{ input: { color: 'white' } }} onChange={handleMessage} className='input' InputLabelProps={{ style: { color: '#fff' }, }} name='message' id="outlined-basic"  rows={4} multiline label="Message" variant="outlined"/>
             <Button variant="contained" onClick={sendEmail}  className='button'>
               <span>Send Message</span>
             </Button>
