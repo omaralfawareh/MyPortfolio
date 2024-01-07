@@ -17,8 +17,8 @@ function About() {
                 <h1 className='label' >
                     About me
                 </h1>
-                <h2 >Omar Alfawareh</h2>
-                <p >Software Engineer</p>
+                <h2 className='label' >Omar Alfawareh</h2>
+                <p className='label' >Software Engineer</p>
                 <hr/>
                 <p>
                     Hi, my name is Omar Alfawareh, and I am a software engineering student with a passion for web development and 2D game design. With a rich background in creating dynamic and user-friendly websites, I have honed my skills in both front-end and back-end technologies.
@@ -80,7 +80,7 @@ function About() {
                     </li>
                 </ul>
                 <Button startIcon={<DownloadOutlined />} variant="contained" href={resume} download={'Resume'} className='button'><span>Download CV</span></Button>
-                <h2>Skills</h2>
+                <h2 className='label'>Skills</h2>
                 <hr/>
                 <SkillCarousel />
                 <hr/>

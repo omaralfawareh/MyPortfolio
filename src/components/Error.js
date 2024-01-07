@@ -1,11 +1,17 @@
 import React from 'react'
 import {Flex} from 'antd'
+import Button from '@mui/material/Button';
+
 const Error = () => {
   return (
-    <Flex vertical align='center' justify='center' style={{height:'100vh',color:'white',fontSize:'30px'}}>
+    <Flex className='error' vertical align='center' gap={'large'} justify='center' >
         <h2>Page Not Found</h2>
-        <img style={{display:'block',height:'200px', width:'400px'}} src={require('../assets/error.png')} alt="Error 404" />
+        <img style={{}} src={require('../assets/error.png')} alt="Error 404" />
+        <Button variant="contained" href='/' className='button'>
+            <span>Go back home</span>
+        </Button>
     </Flex>
+    
   )
 }
 

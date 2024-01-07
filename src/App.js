@@ -17,7 +17,7 @@ function App() {
     setCollapsed(!collapsed);
   };
   return (
-    <div className="App" style={{display:'flex',flexDirection:'row' ,justifyContent:'center', alignContent:'center'}}>
+    <div className="App">
       <Layout >
         <Sider 
           className='sider'
@@ -27,20 +27,10 @@ function App() {
           collapsed={collapsed}
           collapsedWidth ='0' 
           width={window.innerWidth < 768 ?  '100vw':   390} 
-          style={{
-            height: '100%',
-            // backgroundColor:'#101314',
-            backgroundColor:'black',
-            position: 'fixed',
-            left: 0,
-            top: 0,
-            bottom: 0,
-            zIndex:'1',
-           }}
         >
           <div style={{ display:'flex', flexDirection:'row' , alignItems:'center',
                 justifyContent:'center', height:'100vh'}}>
-            <Menu className='menu' theme="dark" mode="inline" style={{textAlign:'left',backgroundColor:'black', padding:'1rem',width:'50%',}} 
+            <Menu className='menu' theme="dark" mode="inline"
             
             onClick={({key}) => {
                 if(key !== "exit")
@@ -50,11 +40,11 @@ function App() {
 
             }}
             items={[
-            {label: <h3 className='label'>home</h3>, key:'/' , icon: <HomeOutlined style={{display:'block',fontSize:'20px',}} />,},
-            {label: <h3 className='label'>about</h3>, key:'/about' ,icon: <UserOutlined style={{display:'block',fontSize:'20px'}} />},
-            {label: <h3 className='label'>projects</h3>, key:'/projects' , icon: <SettingOutlined style={{display:'block',fontSize:'20px'}} />},
-            {label: <h3 className='label'>contact</h3>, key:'/contact' ,icon: <MailFilled style={{display:'block',fontSize:'20px'}} />},
-            {label: <h3  className='label'>exit</h3>, key:'exit',icon: <LeftOutlined  style={{display:'block',fontSize:'20px'}} />},
+            {label: <h3 className='label'>home</h3>, key:'/' , icon: <HomeOutlined className='menuIcon'  />,},
+            {label: <h3 className='label'>about</h3>, key:'/about' ,icon: <UserOutlined className='menuIcon' />},
+            {label: <h3 className='label'>projects</h3>, key:'/projects' , icon: <SettingOutlined className='menuIcon' />},
+            {label: <h3 className='label'>contact</h3>, key:'/contact' ,icon: <MailFilled className='menuIcon' />},
+            {label: <h3  className='label'>exit</h3>, key:'exit',icon: <LeftOutlined className='menuIcon' />},
             ]}
             >
             </Menu>
