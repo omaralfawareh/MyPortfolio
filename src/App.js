@@ -96,7 +96,6 @@ function App() {
               marginLeft: collapsed ? 0 : 390, //To Adjust margin based on Sider state
               transition:
                 window.innerWidth >= 768 ? "width 0.8s, margin-left 0.8s" : "", //To Specify transitions for width and margin-left but non on mobile
-              // border:'white solid 1px'
             }}
           >
             <LoadContent />
