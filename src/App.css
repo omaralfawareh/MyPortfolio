@@ -1,9 +1,9 @@
 .App {
   text-align: center;
   display: flex;
-  flex-direction:row;
-  justify-content:center;
-  align-content:center
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 .App-logo {
   height: 40vmin;
@@ -28,64 +28,63 @@
 .App-link {
   color: #61dafb;
 }
-.menu .label{
+.menu .label {
   transition: 0.3s;
 }
-.menu .label:hover{
+.menu .label:hover {
   letter-spacing: 0.2rem;
 }
-.sider{
+.sider {
   height: 100% !important;
-  background-color:black !important;
+  background-color: black !important;
   position: fixed !important;
   left: 0 !important;
   top: 0 !important;
   bottom: 0 !important;
-  z-index:1 !important;
+  z-index: 1 !important;
 }
-.menu{
+.menu {
   text-align: left;
-  background-color:black;
-  padding:1rem;
-  width:50%;
+  background-color: black;
+  padding: 1rem;
+  width: 50%;
 }
-.menuIcon{
+.menuIcon {
   display: block !important;
-  font-size:20px !important;
-
+  font-size: 20px !important;
 }
 .ant-menu-item-selected {
-    background-color: #101314 !important;
-  }
+  background-color: #101314 !important;
+}
 p {
   font-size: 16px;
   line-height: 1.5rem;
 }
-hr{
+hr {
   width: 100%;
   background-color: black;
   height: 2px;
   border: none;
 }
 /* Home page style Start */
-.home{
+.home {
   height: 100vh;
   color: white;
   text-align: left;
 }
-.home .flex{
+.home .flex {
   font-family: Montserrat;
 }
-.home .flex h1{
+.home .flex h1 {
   font-size: 60px;
   margin: 0px;
 }
-.home .flex p{
+.home .flex p {
   font-size: 16px;
   color: #bbb;
   width: 90%;
 }
-.home .flex .animation{
+.home .flex .animation {
   display: inline-block;
   font-size: 24px;
 }
@@ -95,14 +94,14 @@ hr{
 .socials:hover {
   scale: 1.2;
 }
-.socials .icons{
+.socials .icons {
   display: block;
   font-size: 20px;
   color: white;
 }
 /* Home page style End */
 /* About page style Start */
-.about{
+.about {
   width: 50vw;
   color: white;
   text-align: left;
@@ -118,52 +117,50 @@ hr{
   background-color: black;
   transition: 0.4s;
 }
-.about .button:hover{
+.about .button:hover {
   letter-spacing: 3px;
   background-color: #101314;
 }
-.list{
+.list {
   width: 50%;
   list-style-type: none;
   padding: 0;
-  
 }
-.list li{
+.list li {
   margin-bottom: 1rem;
   font-size: 16px;
 }
-.listFlex{
+.listFlex {
   font-family: Montserrat;
   font-size: 16px;
 }
-.listFlex span{
+.listFlex span {
   width: 30%;
 }
-.listFlex a{
+.listFlex a {
   color: white;
 }
-.about h1{
+.about h1 {
   font-size: 30px;
 }
 .about h2 {
   font-size: 22px;
 }
-.about h3{
+.about h3 {
   font-size: 20px;
 }
-.timelineContainer{
+.timelineContainer {
   width: 80%;
 }
-.timeline{
+.timeline {
   font-family: Montserrat;
   margin-top: 2rem;
   color: white;
-  
 }
-.timeline *{
+.timeline * {
   font-family: Montserrat;
 }
-.timeline span{
+.timeline span {
   margin-left: 2rem;
 }
 /* About page style End */
@@ -173,21 +170,22 @@ hr{
   color: white;
   width: 50vw;
 }
-.contact .content{
-  height: 100vh; 
+.contact .content {
+  height: 100vh;
   padding: 1rem;
 }
-.content h1{
+.content h1 {
   text-align: left;
 }
-.contact #outlined-basic{
+.contact #outlined-basic {
   width: 100%;
 }
-.contact .input{
+.contact .input {
   color: white !important;
   font-style: italic;
 }
-.contact .button, .error .button{
+.contact .button,
+.error .button {
   font-family: MontSerrat;
   width: 25%;
   color: white;
@@ -195,31 +193,32 @@ hr{
   font-weight: bold;
   transition: 0.4s;
 }
-.contact .button:hover,.error .button:hover{
+.contact .button:hover,
+.error .button:hover {
   letter-spacing: 3px;
   background-color: #101314;
 }
-#outlined-basic{
+#outlined-basic {
   color: white;
 }
 /* Contact Component Style END*/
 /* Project Component Style Start */
-.projects h1{
+.projects h1 {
   text-align: start;
 }
-.card .text{
+.card .text {
   font-size: 16px;
   font-family: Montserrat !important;
 }
-.card .button{
+.card .button {
   font-family: Montserrat;
   color: white;
-   background-color:#101314
+  background-color: #101314;
 }
-.card .icons{
+.card .icons {
   margin: 3px;
 }
-.projects{
+.projects {
   width: 50vw;
   height: 100vh;
   padding: 1rem;
@@ -228,32 +227,32 @@ hr{
 }
 /* Project Component Style End */
 /* Error page Start */
-.error{
+.error {
   width: 100%;
   height: 100vh;
   color: white;
-  font-size:30px;
+  font-size: 30px;
   font-family: MontSerrat;
 }
-.error .button{
+.error .button {
   width: 90%;
 }
-.error img{
+.error img {
   display: block;
   height: 200px;
-  width: 350px
+  width: 350px;
 }
 /* Error page End */
 @media screen and (max-width: 900px) {
   .container {
-      overflow-x: hidden !important;
-      /* Hide horizontal overflow on small screens */
-    }
-  .ant-layout-sider .sider{
-      width: 100% !important;
-      /* Make sider take full width on small screens */
-    }
-  .flex{
+    overflow-x: hidden !important;
+    /* Hide horizontal overflow on small screens */
+  }
+  .ant-layout-sider .sider {
+    width: 100% !important;
+    /* Make sider take full width on small screens */
+  }
+  .flex {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -262,37 +261,38 @@ hr{
   * {
     text-align: center;
   }
-  .label{
+  .label {
     text-align: left;
   }
-  .about , .projects{
+  .about,
+  .projects {
     width: 100vw;
     height: 100vh;
   }
-  .about .timelineContainer{
+  .about .timelineContainer {
     width: 100%;
   }
-  .listFlex span{
+  .listFlex span {
     text-align: left;
   }
   .about .timeline span {
     text-align: left;
     margin-left: 0;
   }
-  .list{
+  .list {
     width: 100%;
   }
   .contact {
     width: 100vw;
   }
-  .card{
+  .card {
     width: 100% !important;
   }
 }
 @media screen and (max-width: 1300px) {
   .button {
-      width: 100% !important;
-    }
+    width: 100% !important;
+  }
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
