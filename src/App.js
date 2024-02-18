@@ -6,7 +6,6 @@ import {
   UserOutlined,
   SettingOutlined,
   MailFilled,
-  LeftOutlined,
 } from "@ant-design/icons";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./components/Home";
@@ -48,8 +47,8 @@ function App() {
               theme="dark"
               mode="inline"
               onClick={({ key }) => {
-                if (key !== "exit") navigate(key);
-                if (window.innerWidth < 768 || key === "exit") toggleSider();
+                navigate(key);
+                if (window.innerWidth < 768) toggleSider();
               }}
               items={[
                 {
@@ -71,11 +70,6 @@ function App() {
                   label: <h3 className="label">contact</h3>,
                   key: "/contact",
                   icon: <MailFilled className="menuIcon" />,
-                },
-                {
-                  label: <h3 className="label">exit</h3>,
-                  key: "exit",
-                  icon: <LeftOutlined className="menuIcon" />,
                 },
               ]}
             ></Menu>

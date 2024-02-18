@@ -107,7 +107,7 @@ function About() {
         <Flex justify="space-around"></Flex>
         <Flex className="timelineContainer" justify="space-between">
           <Flex vertical>
-            <h3 className="label">Education</h3>
+            <h2 className="label">Education</h2>
             <Timeline
               className="timeline"
               items={[
@@ -135,7 +135,7 @@ function About() {
             />
           </Flex>
           <Flex vertical>
-            <h3 className="label">Experience</h3>
+            <h2 className="label">Experience</h2>
             <Timeline
               className="timeline"
               items={[
