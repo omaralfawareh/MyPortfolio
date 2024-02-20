@@ -11,7 +11,7 @@ const Error = () => {
       gap={"large"}
       justify="center"
     >
-      <h2>Page Not Found</h2>
+      <h1>Page Not Found</h1>
       <img style={{}} src={require("../assets/error.png")} alt="Error 404" />
       <Button variant="contained" href="/" className="button">
         <span>Go back home</span>

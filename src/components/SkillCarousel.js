@@ -54,66 +54,63 @@ const SkillCarousel = () => {
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="React.js"
           src={require("../assets/react.png")}
-          onMouseOver={() => {
-            return <h1>REACT</h1>;
-          }}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="Java"
           src={require("../assets/java.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="C++"
           src={require("../assets/cpp.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="CSS"
           src={require("../assets/css.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="HTML"
           src={require("../assets/html.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="Python"
           src={require("../assets/python.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="C#"
           src={require("../assets/csharp.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="Unity"
           src={require("../assets/unity.png")}
         />
       </Flex>
       <Flex justify="center" align="center">
         <img
           style={{ width: "100px", height: "100px" }}
-          alt=""
+          alt="Bootstrap"
           src={require("../assets/bootstrap.png")}
         />
       </Flex>

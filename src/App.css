@@ -96,7 +96,7 @@ hr {
 }
 .socials .icons {
   display: block;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
 }
 /* Home page style End */
@@ -150,7 +150,7 @@ hr {
   font-size: 20px;
 }
 .timelineContainer {
-  width: 80%;
+  width: 50%;
 }
 .timeline {
   font-family: Montserrat;
@@ -220,7 +220,7 @@ hr {
 }
 .projects {
   width: 50vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem;
   font-family: MontSerrat;
   color: white;
@@ -267,7 +267,8 @@ hr {
   .about,
   .projects {
     width: 100vw;
-    height: 100vh;
+    height: inherit;
+    /* min-height: 100vh; */
   }
   .about .timelineContainer {
     width: 100%;

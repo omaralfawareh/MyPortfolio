@@ -104,9 +104,43 @@ function About() {
         <hr />
         <SkillCarousel />
         <hr />
-        <Flex justify="space-around"></Flex>
-        <Flex className="timelineContainer" justify="space-between">
-          <Flex vertical>
+        <Flex className="flex">
+          <Flex vertical className="timelineContainer">
+            <h2 className="label">Experience</h2>
+            <Timeline
+              className="timeline"
+              items={[
+                {
+                  children: (
+                    <Flex vertical>
+                      <p className="label">Shahid, MBC Group</p>
+                      <span>Frontend Developer Intern</span>
+                    </Flex>
+                  ),
+                  color: "black",
+                },
+                {
+                  children: (
+                    <Flex vertical>
+                      <p className="label">Eduhax</p>
+                      <span>Web Developer Intern</span>
+                    </Flex>
+                  ),
+                  color: "black",
+                },
+                {
+                  children: (
+                    <Flex vertical>
+                      <p className="label">Orange Jordan</p>
+                      <span>Full-Stack Developer Intern</span>
+                    </Flex>
+                  ),
+                  color: "black",
+                },
+              ]}
+            />
+          </Flex>
+          <Flex vertical className="timelineContainer">
             <h2 className="label">Education</h2>
             <Timeline
               className="timeline"
@@ -116,7 +150,7 @@ function About() {
                     <Flex vertical>
                       <p className="label">
                         Princess Sumaya University for Technology
-                      </p>{" "}
+                      </p>
                       <span>Software Engineering</span>
                     </Flex>
                   ),
@@ -125,34 +159,8 @@ function About() {
                 {
                   children: (
                     <Flex vertical>
-                      <p className="label">Al-Ittihad International Schools</p>{" "}
+                      <p className="label">Al-Ittihad International Schools</p>
                       <span>Student</span>
-                    </Flex>
-                  ),
-                  color: "black",
-                },
-              ]}
-            />
-          </Flex>
-          <Flex vertical>
-            <h2 className="label">Experience</h2>
-            <Timeline
-              className="timeline"
-              items={[
-                {
-                  children: (
-                    <Flex vertical>
-                      <p className="label">Eduhax</p>{" "}
-                      <span>Web Developer Intern</span>
-                    </Flex>
-                  ),
-                  color: "black",
-                },
-                {
-                  children: (
-                    <Flex vertical>
-                      <p className="label">Orange Jordan</p>{" "}
-                      <span>Full-Stack Developer Intern</span>
                     </Flex>
                   ),
                   color: "black",
