@@ -12,7 +12,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Project from "./components/Project";
-
+import SidebarTrigger from "./components/SidebarTrigger";
 import Error from "./components/Error";
 const { Sider, Content } = Layout;
 function App() {
@@ -32,6 +32,7 @@ function App() {
           collapsed={collapsed}
           collapsedWidth="0"
           width={window.innerWidth < 768 ? "100vw" : 390}
+          trigger={<SidebarTrigger />}
         >
           <div
             style={{
@@ -40,6 +41,7 @@ function App() {
               alignItems: "center",
               justifyContent: "center",
               height: "100vh",
+              padding: "0",
             }}
           >
             <Menu

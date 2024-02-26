@@ -8,8 +8,12 @@ import {
 import { Flex } from "antd";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       initial={{ x: -200, opacity: 0 }}
@@ -64,6 +68,15 @@ const Home = () => {
                 <FacebookFilled className="icons" />
               </a>
             </Flex>
+            <Button
+              variant="contained"
+              onClick={() => {
+                navigate("/about");
+              }}
+              className="home-button"
+            >
+              <span>About Me</span>
+            </Button>
           </Flex>
         </Flex>
       </Flex>

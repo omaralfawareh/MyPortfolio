@@ -45,9 +45,10 @@
 }
 .menu {
   text-align: left;
+  font-size: 16px;
   background-color: black;
   padding: 1rem;
-  width: 50%;
+  width: 55%;
 }
 .menuIcon {
   display: block !important;
@@ -73,7 +74,9 @@ hr {
   text-align: left;
 }
 .home .flex {
+  padding: 1rem;
   font-family: Montserrat;
+  position: relative;
 }
 .home .flex h1 {
   font-size: 60px;
@@ -96,8 +99,21 @@ hr {
 }
 .socials .icons {
   display: block;
+  height: 100%;
   font-size: 30px;
   color: white;
+}
+.home .home-button {
+  font-family: MontSerrat;
+  font-size: 16px;
+  background-color: black;
+  transition: 0.4s;
+  margin-top: 1rem;
+  display: none;
+}
+.home .button:hover {
+  letter-spacing: 2px;
+  background-color: #101314;
 }
 /* Home page style End */
 /* About page style Start */
@@ -291,8 +307,12 @@ hr {
   }
 }
 @media screen and (max-width: 1300px) {
-  .button {
+  .button,
+  .home-button {
     width: 100% !important;
+  }
+  .home-button {
+    display: block !important;
   }
 }
 input:-webkit-autofill,
