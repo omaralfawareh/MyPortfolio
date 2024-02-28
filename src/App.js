@@ -44,37 +44,47 @@ function App() {
               padding: "0",
             }}
           >
-            <Menu
-              className="menu"
-              theme="dark"
-              mode="inline"
-              onClick={({ key }) => {
-                navigate(key);
-                if (window.innerWidth < 768) toggleSider();
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-              items={[
-                {
-                  label: <h3 className="label">home</h3>,
-                  key: "/",
-                  icon: <HomeOutlined className="menuIcon" />,
-                },
-                {
-                  label: <h3 className="label">about</h3>,
-                  key: "/about",
-                  icon: <UserOutlined className="menuIcon" />,
-                },
-                {
-                  label: <h3 className="label">projects</h3>,
-                  key: "/projects",
-                  icon: <SettingOutlined className="menuIcon" />,
-                },
-                {
-                  label: <h3 className="label">contact</h3>,
-                  key: "/contact",
-                  icon: <MailFilled className="menuIcon" />,
-                },
-              ]}
-            ></Menu>
+            >
+              <Menu
+                className="menu"
+                theme="dark"
+                mode="inline"
+                onClick={({ key }) => {
+                  navigate(key);
+                  if (window.innerWidth < 768) toggleSider();
+                }}
+                items={[
+                  {
+                    label: <h3 className="label">home</h3>,
+                    key: "/",
+                    icon: <HomeOutlined className="menuIcon" />,
+                  },
+                  {
+                    label: <h3 className="label">about</h3>,
+                    key: "/about",
+                    icon: <UserOutlined className="menuIcon" />,
+                  },
+                  {
+                    label: <h3 className="label">projects</h3>,
+                    key: "/projects",
+                    icon: <SettingOutlined className="menuIcon" />,
+                  },
+                  {
+                    label: <h3 className="label">contact</h3>,
+                    key: "/contact",
+                    icon: <MailFilled className="menuIcon" />,
+                  },
+                ]}
+              ></Menu>
+            </div>
           </div>
         </Sider>
         <Layout style={{ backgroundColor: "#36454f" }}>
