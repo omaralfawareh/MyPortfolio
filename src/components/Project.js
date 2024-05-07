@@ -37,7 +37,7 @@ const Project = () => {
                 alt="business website"
                 onClick={() =>
                   window.open(
-                    "https://github.com/omaralfawareh/BusinessWebsite",
+                    "https://business-website-psi.vercel.app/",
                     "_blank"
                   )
                 }
@@ -78,7 +78,7 @@ const Project = () => {
                 alt="business website"
                 onClick={() =>
                   window.open(
-                    "https://github.com/omaralfawareh/SeminarWebsite",
+                    "https://seminar-website-phi.vercel.app/",
                     "_blank"
                   )
                 }
@@ -161,10 +161,7 @@ const Project = () => {
                 image={require("../assets/login1.png")}
                 alt="business website"
                 onClick={() =>
-                  window.open(
-                    "https://github.com/omaralfawareh/Login-App",
-                    "_blank"
-                  )
+                  window.open("https://login-app-ashy.vercel.app/", "_blank")
                 }
               />
               <CardContent>
