@@ -84,6 +84,9 @@ function Contact() {
             (result) => {
               setSent(true);
               handleClick();
+              setName("");
+              setEmail("");
+              setMessage("");
             },
             (error) => {
               console.log(error.text);
@@ -116,6 +119,7 @@ function Contact() {
             id="outlined-basic"
             label="Name"
             variant="outlined"
+            value={name}
           />
           <TextField
             sx={{ input: { color: "white" } }}
@@ -126,6 +130,7 @@ function Contact() {
             id="outlined-basic"
             label="Email"
             variant="outlined"
+            value={email}
           />
           <TextField
             sx={{ input: { color: "white" } }}
@@ -138,6 +143,7 @@ function Contact() {
             multiline
             label="Message"
             variant="outlined"
+            value={message}
           />
           <Button variant="contained" onClick={sendEmail} className="button">
             <span>Send Message</span>
@@ -167,7 +173,7 @@ function Contact() {
           open={open}
           autoHideDuration={6000}
           onClose={handleClose}
-          message="Improper Inputs"
+          message="Improper Inputs Please Try Again"
           action={action}
         />
       )}
