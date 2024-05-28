@@ -5,7 +5,26 @@ import Button from "@mui/material/Button";
 import resume from "../assets/Resume.pdf";
 import { motion } from "framer-motion";
 import SkillCarousel from "./SkillCarousel";
+
+const calculateAge = (birthday) => {
+  const birthDate = new Date(birthday);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDifference = today.getMonth() - birthDate.getMonth();
+
+  if (
+    monthDifference < 0 ||
+    (monthDifference === 0 && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+
+  return age;
+};
+
 function About() {
+  const age = calculateAge("2002-04-17");
+
   return (
     <motion.div
       initial={{ x: -200, opacity: 0 }}
@@ -50,7 +69,7 @@ function About() {
               justify="start"
             >
               <span className="label">Age :</span>
-              <span>21</span>
+              <span>{age}</span>
             </Flex>
           </li>
           <li>
@@ -114,7 +133,7 @@ function About() {
                   children: (
                     <Flex vertical>
                       <p className="label">Shahid, MBC Group</p>
-                      <span>Frontend Developer Intern</span>
+                      <span>Web Developer Intern</span>
                     </Flex>
                   ),
                   color: "black",
